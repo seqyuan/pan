@@ -10,7 +10,7 @@ jobs:
   super-job:
     runs-on: ubuntu-18.04
     container:
-        image: ghcr.io/alpine/r:v0.0.1
+        image: ghcr.io/alpine/r:v0.1
         credentials:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.PAT }}
