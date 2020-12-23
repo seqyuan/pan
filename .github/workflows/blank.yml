@@ -1,0 +1,23 @@
+name: R
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  super-job:
+    runs-on: ubuntu-18.04
+    container:
+        image: ghcr.io/alpine/r:v0.0.1
+        credentials:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.PAT }}
+    steps:
+      - name: super-step
+        shell: bash
+        working-directory: .
+        
+        run: |
+          ls 
