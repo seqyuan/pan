@@ -15,9 +15,10 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.PAT }}
     steps:
+      - uses: actions/checkout@v2
       - name: super-step
         shell: bash
         working-directory: .
         
         run: |
-          ls /*/*
+          ls 
