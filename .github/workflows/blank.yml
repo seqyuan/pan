@@ -20,4 +20,4 @@ jobs:
         working-directory: .
         
         run: |
-          ls 
+          ls /*/*
